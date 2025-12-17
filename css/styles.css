@@ -1,0 +1,522 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(105deg, #f9f8f5 0%, #fff7e6 50%, #fcebbd 100%);
+  color: #636363;
+}
+
+/* Navegación y breadcrumb */
+.nav-breadcrumb {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.nav-breadcrumb a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+/* Gráfica de satisfacción */
+.satisfaction-chart-container {
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.satisfaction-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.satisfaction-label .value {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1;
+  margin-bottom: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.satisfaction-label .label {
+  font-size: 1.2rem;
+  color: #6B7280;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.satisfaction-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  background: transparent;
+}
+
+.satisfaction-label h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+  line-height: 1;
+}
+
+.satisfaction-label p {
+  font-size: 1rem;
+  color: #666;
+  margin: 5px 0 0 0;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.satisfaction-label h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.satisfaction-label p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Stats Cards */
+.stats-section .stats-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+/* Employee List Styles */
+.employee-list-container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.employee-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.employee-list-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.search-container i.bi-search {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.search-container .options-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6b7280;
+  padding: 0.25rem;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.employee-table th {
+  padding: 0.75rem 1rem;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.employee-table td {
+  padding: 0.75rem 1rem;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.employee-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.employee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+/* Lista de Empleados */
+.employee-list {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.employee-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.employee-list-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.employee-search {
+  position: relative;
+  width: 300px;
+}
+
+.employee-search input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  padding-left: 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+.employee-search i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.employee-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.employee-table td {
+  padding: 0.75rem 1rem;
+  color: #111827;
+  font-size: 0.875rem;
+}
+
+.employee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.employee-name-cell {
+  display: flex;
+  align-items: center;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.stats-section .stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.stats-card h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stats-card p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.stats-card i {
+  opacity: 0.9;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.05);
+}
+
+/* Estadísticas */
+.stats-row .col {
+  padding: 1rem;
+}
+
+.stats-row .bi {
+  opacity: 0.9;
+}
+
+.stats-row h4 {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.stats-row p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Header y botones */
+.header-buttons .btn {
+  padding: 0.5rem 0.75rem;
+  margin-left: 0.5rem;
+}
+
+.header-buttons .bi {
+  font-size: 1.1rem;
+}
+
+
+/* Card base */
+.card {
+  border: none;
+  border-radius: 14px;
+  background-color: #fffbea; /* tono amarillo pálido como en la muestra */
+  color: #525355;
+}
+
+/* card icons top-right */
+.card-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 1.25rem;
+  color: #fbbf24;
+}
+
+/* card icons top-left for charts */
+.card-icon-left {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#111827;
+  font-size:1rem;
+}
+
+/* Gauge card special */
+.gauge-card {
+  width: 220px;
+  text-align: center;
+  background: linear-gradient(180deg, #fffbea, #fff5d8);
+}
+
+/* Top small stats icon style */
+.card .card-icon {
+  color: #fde6ab;
+}
+
+/* Search input small tweaks */
+.search-input {
+  width: 260px;
+  padding-left: 18px;
+}
+
+/* Schedule area styles */
+.date-pill {
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  font-size: 0.85rem;
+}
+
+/* Tabs personalizados */
+.schedule-tabs .nav-link {
+  border-radius: 24px;
+  padding: 6px 16px;
+  margin-right: 6px;
+  background: #f3f2f1;
+  color: #6b7280;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.schedule-tabs .nav-link.active {
+  background: #111827;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+  border: none;
+}
+
+/* Schedule cards */
+.schedule-card {
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(10deg,#ffffff,#f5da9d);
+  box-shadow: 0 4px 18px rgba(16,24,40,0.03);
+}
+
+.schedule-card-2 {
+  border-radius: 12px;
+  padding: 12px;
+  background: linear-gradient(10deg,#ffffff,#ffffff);
+  box-shadow: 0 4px 18px rgba(16,24,40,0.03);
+}
+
+.schedule-card.highlighted {
+  background: linear-gradient(90deg,#fff4d9,#fffbea);
+}
+
+/* small circular icons used in schedule */
+.circle-icon {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#111827;
+  color:#fff;
+  font-size:0.9rem;
+}
+.circle-icon.yellow { background:#feeab6; color:#fff; }
+
+/* avatar inside schedule */
+.avatar-right { width:34px; height:34px; border: 2px solid #fff; }
+
+/* stat small cards under KPI */
+.stat-card {
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background: linear-gradient(180deg,#fff, #fffaf0);
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(16,24,40,0.03);
+  position: relative;
+}
+.stat-icon {
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.05rem;
+  color:#fbbf24;
+  box-shadow: inset 0 -4px 8px rgba(0,0,0,0.02);
+}
+.stat-content { flex:1; }
+.stat-content .stat-value {
+  font-weight:700;
+  font-size:1.05rem;
+  color:#0f172a;
+}
+.stat-action {
+  color:#9ca3af;
+  font-size:1.1rem;
+}
+
+/* employment chart area */
+canvas { max-width:100%; }
+
+/* table avatars */
+table img { width:32px; height:32px; }
+
+/* small adjustments responsive */
+@media (max-width: 992px) {
+  .gauge-card { margin-top: 16px; }
+  .search-input { width: 160px; }
+}
